@@ -1,0 +1,175 @@
+body {
+  background-color: black;
+  animation: bwLoop 3s linear infinite;
+
+  position: relative;
+  font-family: Snell Roundhand, cursive;
+  width: 280px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+@keyframes bwLoop {
+  0% {
+    background-color: black;
+    color: white;
+  }
+  50% {
+    background-color: white;
+    color: black;
+  }
+  100% {
+    background-color: black;
+    color: white;
+  }
+}
+
+header {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#status-text {
+  opacity: 0;
+  transition: opacity 0.4s;
+  font-size: 0.85em;
+  margin-bottom: 8px;
+  height: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  margin-bottom: 20px;
+  margin-left: 150px; /* added this to move it to the right */
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  border: 2px solid black;
+  transition: background-color 0.4s, border-color 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+  border-color: black;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 12px;
+  margin-top: -50px;
+  margin-bottom: 10px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start; /* align left */
+  gap: 10px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+
+.icons a img {
+  height: 32px;
+  width: 32px;
+}
+
+footer {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.mod-link {
+  font-size: 10px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.hi-msg {
+  margin: 50px 0 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.side-image {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.side-image {
+  position: absolute;
+  top: 120px; 
+  right: 10px;
+}
+
+.side-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}

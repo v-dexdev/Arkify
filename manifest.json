@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Arkify",
+  "version": "1.0.0",
+  "description": "Make every video into Arknights Chibi!!",
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/images/*.PNG",
+        "assets/popup/*.jpeg",
+        "assets/popup/*.webp",
+        "assets/popup/*.png"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": "assets/icon/main.png",
+    "default_popup": "popup.html",
+    "default_title": "Arkify"
+  },
+  "icons": {
+    "128": "assets/icon/main.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "arkify@sure.com",
+      "strict_min_version": "58.0"
+    }
+  }
+}
