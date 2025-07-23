@@ -8,7 +8,7 @@ ${\color{Cyan}Arkify}$
   </div>
 
   <p>
-    a chrome extension that makes every thumbnail on youtube arknights themed (will be available on the chrome web store if they approve)
+    a chrome extension that makes every thumbnail on youtube arknights themed (https://chromewebstore.google.com/detail/arkify/dldgadkmbgpkmgjgllnphnhejdhdmiff)
   </p>
   
   <p>
